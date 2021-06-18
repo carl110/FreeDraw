@@ -111,6 +111,7 @@ namespace FreeDraw
         private void drawEllipse(int width, int height)
         {
             Graphics g = picDraw.CreateGraphics();
+            Pen p = new Pen(penColour, penWidth);
             g.DrawEllipse(p, StartLocation.Value.X, StartLocation.Value.Y, width, height);
             if (fillStyle)
                 g.FillEllipse(penColour, StartLocation.Value.X, StartLocation.Value.Y, width, height);
@@ -120,6 +121,7 @@ namespace FreeDraw
         private void drawCircle(int width, int height)
         {
             Graphics g = picDraw.CreateGraphics();
+            Pen p = new Pen(penColour, penWidth);
             g.DrawEllipse(p, StartLocation.Value.X, StartLocation.Value.Y, Math.Min(width, height), Math.Min(width, height));
             if (fillStyle)
                 g.FillEllipse(penColour, StartLocation.Value.X, StartLocation.Value.Y, Math.Min(width, height), Math.Min(width, height));
